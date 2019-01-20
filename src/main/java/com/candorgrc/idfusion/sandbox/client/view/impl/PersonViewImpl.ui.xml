@@ -3,7 +3,7 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui"
 	xmlns:dp="urn:import:com.candorgrc.idfusion.sandbox.client.datapresentation">
 	<ui:style>
-	
+
 	</ui:style>
 	<g:HTMLPanel styleName="person-view">
 		<header>
@@ -84,7 +84,7 @@
 				</div>
 
 
-				<div>
+					<div class="date">
 					<label for="start">Start</label>
 					<input type="date" id="start" value="2018-09-29"
 						min="2018-01-01" max="2018-12-31" />
@@ -110,4 +110,4 @@
 			<button ui:field="fetch" class="fetch">Fetch more...</button>
 		</footer>
 	</g:HTMLPanel>
-</ui:UiBinder> 
+</ui:UiBinder>
