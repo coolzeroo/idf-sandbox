@@ -1,1 +1,256 @@
-/** Add less rules here for your application. */
+// Colors
+@white: #ffffff; // Appears 18 times
+@black: #000000; // Appears 9 times
+@red: #e74c3c; // header hover buttons
+@mauve: #7544b9c7; // copy edit delete
+@mauveh: #7544b9;  // copy edit delete hover
+
+// Width
+@width0: 36.4%; // Appears 1 time
+@width1: 210px; // Appears 1 time
+@width2: 220px; // Appears 2 times
+@width3: 31.9%; // Appears 3 times
+@width4: 100%; // Appears 2 times
+@width5: 91%; // Appears 1 time
+@width6: 40%; // Appears 2 times
+@width7: 57%; // Appears 1 time
+
+// Height
+@height0: 360px; // Appears 1 time
+@height1: 30px; // Appears 1 time
+
+.workspace {
+	background-color: #3a78ab;
+}
+.person-view {
+	overflow:auto;
+  margin-left: 10px;
+}
+.value {
+	border-radius: 4px;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+	height: @height1;
+	margin-bottom: 15px;
+	resize: vertical;
+	width: @width7;
+}
+span.label {
+	color: @white;
+	display: inline-block;
+	float: left;
+	font-family: cursive;
+	font-size: 16px;
+	width: @width6;
+}
+label {
+	color: @white;
+	display: inline-block;
+	float: left;
+	font-family: cursive;
+	font-size: 16px;
+	width: @width6;
+}
+.person-cell {
+	background-color: @white;
+	border: 1px solid @black;
+	box-shadow: 20px 10px 30px #00000073;
+	display: inline-block;
+	float: left;
+	height: @height0;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	max-width: @width1;
+	overflow: auto;
+	padding: 10px;
+	position: relative;
+	width: @width4;
+	word-wrap:break-word;
+}
+.personal-info {
+	.race {
+		border-top: 1px solid @black;
+	}
+	.language {
+		border-top: 1px solid @black;
+	}
+}
+.education {
+	border-top: 1px solid @black;
+}
+.work {
+	border-top: 1px solid @black;
+}
+.department {
+	border-top: 1px solid @black;
+}
+.person-cell .company, .person-cell .ein, .person-cell .email, .person-cell .linkedin-skill, .person-cell .buzzword  {
+	border-top: 1px solid @black;
+}
+button.apply-filters {
+	background-color: transparent;
+	border-radius: 0.6em;
+	border: 2px solid @white;
+	color: @white;
+	cursor: pointer;
+	display: flex;
+	float: left;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	margin: 30px 10px 10px 0;
+	padding: 10px;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.toggle-view-mode {
+	background-color: transparent;
+	border-radius: 0.6em;
+	border: 2px solid @white;
+	color: @white;
+	cursor: pointer;
+	display: flex;
+	float: left;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	margin: 30px 10px 10px 0;
+	padding: 10px;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.reset {
+	background-color: transparent;
+	border-radius: 0.6em;
+	border: 2px solid @white;
+	color: @white;
+	cursor: pointer;
+	display: flex;
+	float: left;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	margin: 30px 10px 10px 0;
+	padding: 10px;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+button.fetch {
+	background-color: #3a78ab;
+	border-radius: 0.6em;
+	border: 2px solid @white;
+	color: @white;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	margin-top: 10px;
+	padding: 10px;
+	position: fixed;
+	right: 30px;
+	top: 30px;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+button.apply-filters:hover, .fetch:hover, .toggle-view-mode:hover, .reset:hover  {
+	background-color: @red;
+	box-shadow: 5px 5px 5px @black;
+	color: @white;
+}
+header.controls {
+	display: inline-block;
+}
+button.edit {
+	background-color: @mauve;
+	border-radius: 0.4em;
+	color: @white;
+	cursor: pointer;
+	font-weight: 700;
+	margin-right: 3px;
+	margin-top: 10px;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+	width: @width3;
+	&:hover {
+		box-shadow: 0 0 40px 40px @mauveh inset;
+		color: @white;
+	}
+}
+.copy {
+	background-color: @mauve;
+	border-radius: 0.4em;
+	color: @white;
+	cursor: pointer;
+	font-weight: 700;
+	margin-right: 3px;
+	margin-top: 10px;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+	width: @width3;
+	&:hover {
+		box-shadow: 0 0 40px 40px @mauveh inset;
+		color: @white;
+	}
+}
+.delete {
+	background-color: @mauve;
+	border-radius: 0.4em;
+	color: @white;
+	cursor: pointer;
+	font-weight: 700;
+	margin-right: 3px;
+	margin-top: 10px;
+	transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+	width: @width3;
+	&:hover {
+		box-shadow: 0 0 40px 40px @mauveh inset;
+		color: @white;
+	}
+}
+.date {
+	margin-top: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  input, span.label, .value {
+    width: 100%;
+  }
+  .person-cell {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+  .person-view {
+    margin-right: 10px;
+  }
+	button.fetch {
+    margin: 10px 0 10px 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .filter-toolbar {
+      display: inline-block;
+      float: left;
+      width: 36.4%;
+      margin-top: 30px;
+      margin-left: 20px;
+  }
+  .person-cell {
+        position: relative;
+        float: left;
+        width: 100%;
+        max-width: 210px;
+        height: 360px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        display: inline-block;
+        border: 1px solid #000;
+        word-wrap:break-word;
+  }
+  nav.controls {
+    position: absolute;
+    bottom: 10px;
+    width: 91%;
+  }
+  button.fetch {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+  }
+}

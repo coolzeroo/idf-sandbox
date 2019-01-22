@@ -1,39 +1,42 @@
-
-.person-view {
-  overflow:auto;
+.workspace {
+  background-color: #3a78ab;
 }
 
+.person-view {
+	overflow:auto;
+  margin-left: 10px;
+}
+
+/* -------------------------- Input fields -------------------------- */
 .value {
   width: 57%;
   height: 30px;
-  margin-bottom: 5px;
-
+  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
 }
 
+/* -------------------------- Input labels -------------------------- */
 span.label, label {
   width: 40%;
   float: left;
   display: inline-block;
+  color: #fff;
   font-size: 16px;
   font-family: cursive;
 }
-/*
+
+/* ---------------------- Filter Box -------------------------- */
+
 .person-cell {
-      float: left;
-      width: 18%;
-      height: 360px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-      padding: 10px;
-      display: inline-block;
-      border: 1px solid #000;
-      word-wrap:break-word;
+  overflow: auto;
+  background-color: #fff;
+  box-shadow: 20px 10px 30px #00000073;
 }
-*/
+
+/* ---------------- Filter Box Fields ------------------- */
 
 .personal-info .race, .personal-info .language {
   border-top: 1px solid #000;
@@ -47,156 +50,118 @@ span.label, label {
     border-top: 1px solid #000;
 }
 
+/* ----------- Buttons Header -------------- */
 button.apply-filters, .toggle-view-mode, .reset {
-  box-sizing: border-box;
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-background-color: transparent;
-border: 2px solid #e74c3c;
-border-radius: 0.6em;
-color: #e74c3c;
-cursor: pointer;
-display: flex;
 float: left;
-align-self: center;
+display: flex;
+margin: 30px 10px 10px 0;
+padding: 10px;
+background-color: transparent;
+border: 2px solid #fff;
+border-radius: 0.6em;
+color: #fff;
+cursor: pointer;
 font-size: 12px;
 font-weight: 700;
 line-height: 1;
-margin: 30px 10px 10px 0;
-padding: 10px;
-text-decoration: none;
-text-align: center;
 transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
-
 button.fetch {
-box-sizing: border-box;
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-background-color: transparent;
-border: 2px solid #e74c3c;
+background-color: #3a78ab;
+border: 2px solid #fff;
 border-radius: 0.6em;
-color: #e74c3c;
+color: #fff;
 cursor: pointer;
-
-align-self: center;
 font-size: 12px;
-font-weight: 800;
+font-weight: 700;
 line-height: 1;
-/* margin: 10px; */
 padding: 10px;
-text-decoration: none;
-text-align: center;
 transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 button.apply-filters:hover, .fetch:hover, .toggle-view-mode:hover, .reset:hover {
-  box-shadow: 0 0 40px 40px #e74c3c inset;
-  color: #000;
+  box-shadow: 5px 5px 5px #000;
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* ----------- Buttons Filter Box -------------- */
+
+header.controls {
+  display: inline-block;
 }
 
 button.edit, .copy, .delete {
-    background-color: transparent;
-    color: #e74c3c;
+    background-color: #7544b9c7;
+    color: #fff;
     width: 31.9%;
     cursor: pointer;
     margin-top: 10px;
     margin-right: 3px;
-    border-radius: 0.6em;
-    border-color: #000;
+    border-radius: 0.4em;
     font-weight: 700;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-
 }
 button.edit:hover, .copy:hover, .delete:hover {
-  box-shadow: 0 0 40px 40px #e74c3c inset;
-  color: #000;
-}
-
-header.controls {
-  display: inline-block;
+  box-shadow: 0 0 40px 40px #7544b9 inset;
+  color: #fff;
 }
 
 .date {
   margin-top: 25px;
 }
 
-/* ----------------Responsive----------------- */
+/* ---------------- Responsive ----------------- */
 
 @media screen and (max-width: 768px) {
   input, span.label, .value {
     width: 100%;
-
   }
-
+  .person-cell {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
   .person-view {
-    margin: 10px
+    margin-right: 10px;
   }
-
   button.fetch {
-    margin-top: 10px;
+    margin: 10px 0 10px 0;
   }
 }
 
-
 @media screen and (min-width: 900px) {
-
-  .person-view {
-    margin-left: 20px;
-  /*  margin-top: 30px;  */
-  }
-
   /* Shows filter next to Form  */
   .filter-toolbar {
       display: inline-block;
       float: left;
       width: 36.4%;
       margin-top: 30px;
+      margin-left: 20px;
   }
-
   .person-cell {
+        position: relative;
         float: left;
         width: 100%;
         max-width: 210px;
         height: 360px;
-        margin-right: 10px;
         margin-bottom: 10px;
+        margin-right: 10px;
         padding: 10px;
         display: inline-block;
-
         border: 1px solid #000;
         word-wrap:break-word;
   }
-
+   /* fixed filter controls postion */
+  nav.controls {
+    position: absolute;
+    bottom: 10px;
+    width: 91%;
+  }
   button.fetch {
     position: fixed;
     top: 30px;
     right: 30px;
-  }
-
-}
-
-/* ------------- Ipad ------------------ */
-@media only screen
-  and (min-width: 1024px)
-  and (max-height: 768px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-  .person-cell {
-        max-width: 220px;
-  }
-}
-
-/* ------------- Ipad Pro -------------- */
-@media only screen
-  and (min-width: 1024px)
-  and (max-height: 1366px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-  .person-cell {
-        max-width: 220px;
   }
 }
