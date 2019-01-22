@@ -136,9 +136,9 @@ button.edit:hover, .copy:hover, .delete:hover {
   .filter-toolbar {
       display: inline-block;
       float: left;
-      width: 36.4%;
+      width: 35.4%;
       margin-top: 30px;
-      margin-left: 20px;
+      margin-left: 10px;
   }
   .person-cell {
         position: relative;
